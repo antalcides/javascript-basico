@@ -1,19 +1,22 @@
-# Variables
+# Variables y Operadores
+
+## Variables
 
 Las Variables se utilizan para almacenar datos
 
-Las variables solo tienen visibilidad (ambito) dentro de las funciones donde se declaran
+Las variables solo tienen visibilidad \(ambito\) dentro de las funciones donde se declaran
 
-Antes de poder utilizar una variable hay que:  
+Antes de poder utilizar una variable hay que:
 
-* Declarar la variable (con la sentencia `var`)  
-* Inicializar la variable (en el momento de la declaración o despues)  
+* Declarar la variable \(con la sentencia `var`\)  
+* Inicializar la variable \(en el momento de la declaración o despues\)  
 
 ```javascript
 var a = 1;
 var b;
 b = 2;
 ```
+
 Las variables son Case Sensitive
 
 ```javascript
@@ -23,9 +26,9 @@ case_matters
 CASE_MATTERS
 ```
 
-### ¿Cómo chequear la existencia de una variable?
+#### ¿Cómo chequear la existencia de una variable?
 
-#### Forma Mala
+**Forma Mala**
 
 ```javascript
 >>> var result = '';
@@ -35,10 +38,10 @@ somevar is not defined
 ""
 ```
 
-T> Genera un warning y que `somevar` devuelva `false` no quiere decir que no esté definida
+T&gt; Genera un warning y que `somevar` devuelva `false` no quiere decir que no esté definida
 
-#### [Forma Correcta](http://bonsaiden.github.io/JavaScript-Garden/#types.typeof)
-    
+**Forma Correcta**
+
 ```javascript
 >>> var somevar;
 >>> if (typeof somevar !== "undefined"){result = 'yes';}
@@ -53,26 +56,29 @@ T> Genera un warning y que `somevar` devuelva `false` no quiere decir que no est
 "yes"
 ```
 
-T> Si la variable está definida y tiene algún valor, su tipo de datos siempre será distinto de `undefined`
+T&gt; Si la variable está definida y tiene algún valor, su tipo de datos siempre será distinto de `undefined`
 
-# Primitivas y Tipos de Datos
+## Primitivas y Tipos de Datos
 
 Cualquier valor que se utilize en JS es de un cierto tipo. En Javascript existen los siguientes tipos de datos primitivos:
 
-- **Number**: Puede contener numeros enteros (integer), decimales (float), hexadecimales, octales, exponentes y los números especiales `NaN` y `Infinity`
-- **String**: Cualquier numero de caracteres entre comillas
-- **Boolean**: puede ser `true` or `false` 
-- **Undefined**: Es un tipo de datos con un solo valor: [`undefined`](http://bonsaiden.github.com/JavaScript-Garden/#core.undefined)  
+* **Number**: Puede contener numeros enteros \(integer\), decimales \(float\), hexadecimales, octales, exponentes y los números especiales `NaN` y `Infinity`
+* **String**: Cualquier numero de caracteres entre comillas
+* **Boolean**: puede ser `true` or `false` 
+* **Undefined**: Es un tipo de datos con un solo valor: [`undefined`](http://bonsaiden.github.com/JavaScript-Garden/#core.undefined)  
+
     Lo devuelve JS cuando no existe una variable o no está inicializada.
-- **Null**: Otro tipo de datos con un solo valor: [`null`](http://bonsaiden.github.com/JavaScript-Garden/#core.undefined)  
+
+* **Null**: Otro tipo de datos con un solo valor: [`null`](http://bonsaiden.github.com/JavaScript-Garden/#core.undefined)  
+
     Lo podemos asignar nosotros para inicializar a vacio.
 
 Cualquier valor que no pertenezca a uno de estos 5 tipo de primitivas es un objeto
 
-Asi que los tipos de datos en javascript pueden ser:  
+Asi que los tipos de datos en javascript pueden ser:
 
-- Primitivas (Los 5 tipos)  
-- No primitivas (Objetos)  
+* Primitivas \(Los 5 tipos\)  
+* No primitivas \(Objetos\)  
 
 Aunque existe el operador [`typeof`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeof) que devuelve el tipo de dato, es mejor utilizar [`Object.prototype.toString`](http://bonsaiden.github.io/JavaScript-Garden/#types.typeof)
 
@@ -95,7 +101,7 @@ Aunque existe el operador [`typeof`](https://developer.mozilla.org/es/docs/Web/J
 "[object Number]"
 ```
 
-Existe el valor especial `NaN` (Not a Number) que obtenemos cuando intentamos hacer una operación que asume numeros pero la operación falla.
+Existe el valor especial `NaN` \(Not a Number\) que obtenemos cuando intentamos hacer una operación que asume numeros pero la operación falla.
 
 ```javascript
 >>> var a = 10 * f;
@@ -103,9 +109,9 @@ Existe el valor especial `NaN` (Not a Number) que obtenemos cuando intentamos ha
 NaN
 ```
 
-# Operadores (Aritméticos, Lógicos y de Comparación)
+## Operadores \(Aritméticos, Lógicos y de Comparación\)
 
-Los Operadores toman uno o dos valores (o variables), realizan una operación, y devuelven un valor
+Los Operadores toman uno o dos valores \(o variables\), realizan una operación, y devuelven un valor
 
 El operador simple de asignación es =
 
@@ -113,39 +119,39 @@ El operador simple de asignación es =
 var a = 1;
 ```
 
-## Operadores Aritméticos 
+### Operadores Aritméticos
 
 Los operadores aritméticos básicos son:
 
-#### `+` Suma
+**+ Suma**
 
 ```javascript
 >>> 1 + 2;
 3
 ```
 
-####  `-` Resta
+**- Resta**
 
 ```javascript
 >>> 99.99 - 11;
 88.99
 ```
 
-####  `*` Multiplicación
+**\* Multiplicación**
 
 ```javascript
 >>> 2 * 3;
 6
 ```
 
-####  `/` División
+**/ División**
 
 ```javascript
 >>> 6 / 4;
 1.5
 ```
 
-####  `%` Modulo
+**% Modulo**
 
 El resto de la división
 
@@ -156,7 +162,7 @@ El resto de la división
 2
 ```
 
-Podemos utilizar el operador modulo, por ejemplo, para comprobar si un numero es par (`% = 0`) o impar (`% = 1`) .
+Podemos utilizar el operador modulo, por ejemplo, para comprobar si un numero es par \(`% = 0`\) o impar \(`% = 1`\) .
 
 ```javascript
 >>> 4 % 2;
@@ -165,9 +171,9 @@ Podemos utilizar el operador modulo, por ejemplo, para comprobar si un numero es
 1
 ```
 
-####  `++` Incremento en 1
+**++ Incremento en 1**
 
-_Post-incremento_ devuelve el valor original (return) y despues incrementa el valor en 1.
+_Post-incremento_ devuelve el valor original \(return\) y despues incrementa el valor en 1.
 
 ```javascript
 >>> var a = 123; var b = a++;
@@ -177,7 +183,7 @@ _Post-incremento_ devuelve el valor original (return) y despues incrementa el va
 124
 ```
 
-_Pre-incremento_ incrementa el valor en 1 y despues devuelve (return) el nuevo valor (ya incrementado).
+_Pre-incremento_ incrementa el valor en 1 y despues devuelve \(return\) el nuevo valor \(ya incrementado\).
 
 ```javascript
 >>> var a = 123; var b = ++a;
@@ -187,9 +193,9 @@ _Pre-incremento_ incrementa el valor en 1 y despues devuelve (return) el nuevo v
 124
 ```
 
-####  `--` Decremento en 1
+**-- Decremento en 1**
 
-_Post-decremento_ devuelve el valor original (return) y despues resta el valor en 1.
+_Post-decremento_ devuelve el valor original \(return\) y despues resta el valor en 1.
 
 ```javascript
 >>> var a = 123; var b = a--;
@@ -199,7 +205,7 @@ _Post-decremento_ devuelve el valor original (return) y despues resta el valor e
 122
 ```
 
-_Pre-incremento_ resta el valor en 1 y despues devuelve (return) el nuevo valor (ya restado).
+_Pre-incremento_ resta el valor en 1 y despues devuelve \(return\) el nuevo valor \(ya restado\).
 
 ```javascript
 >>> var a = 123; var b = --a;
@@ -217,15 +223,13 @@ Tambien hay operadores compuestos
 8
 ```
 
-## Operadores Lógicos
+### Operadores Lógicos
 
 Los Operadores Lógicos son:
 
-- `!`   → logical NOT (negation) 
-
-- `&&`  → logical AND 
-
-- `||`  → logical OR
+* `!` → logical NOT \(negation\)
+* `&&` → logical AND
+* `||` → logical OR
 
 ```javascript
 >>> var b = !true;
@@ -243,23 +247,22 @@ true
 
 Las posibles operaciones y sus resultados son:
 
+| Operation | Result |
+| :--- | :--- |
+| `true && true` | `true` |
+| `true && false` | `false` |
+| `false && true` | `false` |
+| `false && false` | `false` |
+| `true` ❘❘ `true` | `true` |
+| `true` ❘❘ `false` | `true` |
+| `false` ❘❘ `true` | `true` |
+| `false` ❘❘ `false` | `false` |
 
-| Operation         | Result
-|-----------------  |----------
-| `true && true`    | `true`
-| `true && false`   | `false`
-| `false && true`   | `false`
-| `false && false`  | `false`
-| `true` &#10072;&#10072; `true`  | `true`
-| `true` &#10072;&#10072; `false`   | `true`
-| `false` &#10072;&#10072; `true`   | `true`
-| `false` &#10072;&#10072; `false`  | `false`
-
-## Operadores de Comparación
+### Operadores de Comparación
 
 Los Operadores de Comparación son:
 
-#### `==` Igualdad
+**== Igualdad**
 
 Devuelve `true` cuando los dos operandos son iguales. Los operandos son convertidos al mismo tipo de datos antes de la comparacion
 
@@ -272,9 +275,9 @@ false
 true
 ```
 
-#### `===` Igualdad y Tipo
+**=== Igualdad y Tipo**
 
-Devuelve `true` cuando los dos operandos son iguales Y cuando son del mismo tipo de datos. Suele ser mejor y más seguro, utilizar esta comparación de igualdad (no hay transformaciones de tipo no controladas)
+Devuelve `true` cuando los dos operandos son iguales Y cuando son del mismo tipo de datos. Suele ser mejor y más seguro, utilizar esta comparación de igualdad \(no hay transformaciones de tipo no controladas\)
 
 ```javascript
 >>> 1 === '1';
@@ -283,9 +286,9 @@ false
 true
 ```
 
-#### `!=` No Igualdad
-    
-Devuelve `true` cuando los dos operandos NO son iguales (despues de una conversion de tipo)
+**!= No Igualdad**
+
+Devuelve `true` cuando los dos operandos NO son iguales \(despues de una conversion de tipo\)
 
 ```javascript
 >>> 1 != 1;
@@ -296,8 +299,8 @@ false
 true
 ```
 
-#### `!==` No Igualdad Sin conversion de tipo
-    
+**!== No Igualdad Sin conversion de tipo**
+
 Devuelve `true` cuando los dos operandos NO son iguales o cuando son de tipos diferentes
 
 ```javascript
@@ -307,8 +310,8 @@ false
 true
 ```
 
-#### `>` Mayor que
-    
+**&gt; Mayor que**
+
 Devuelve `true` si el operando de la izquierda es mayor que el de la derecha
 
 ```javascript
@@ -318,8 +321,8 @@ false
 true
 ```
 
-#### `>=` Mayor o Igual que
-    
+**&gt;= Mayor o Igual que**
+
 Devuelve `true` si el operando de la izquierda es mayor o igual que el de la derecha
 
 ```javascript
@@ -327,8 +330,8 @@ Devuelve `true` si el operando de la izquierda es mayor o igual que el de la der
 true
 ```
 
-#### `<` Menor que
-    
+**&lt; Menor que**
+
 Devuelve `true` si el operando de la izquierda es menor que el de la derecha
 
 ```javascript
@@ -338,8 +341,8 @@ false
 true
 ```
 
-#### `<=` Menor o Igual que
-    
+**&lt;= Menor o Igual que**
+
 Devuelve `true` si el operando de la izquierda es menor o igual que el de la derecha
 
 ```javascript
@@ -349,9 +352,9 @@ true
 true
 ```
 
-# Conversiones 
+## Conversiones
 
-Si utilizamos un numero entre comillas (string) en una operación aritmética Javascript lo convierte en numero
+Si utilizamos un numero entre comillas \(string\) en una operación aritmética Javascript lo convierte en numero
 
 ```javascript
 >>> var s = "100"; typeof s; 
@@ -362,7 +365,7 @@ Si utilizamos un numero entre comillas (string) en una operación aritmética Ja
 "number"
 ```
 
-¡OJO! `undefined` y `null` devuelven cosas diferentes al convertirlas a numero 
+¡OJO! `undefined` y `null` devuelven cosas diferentes al convertirlas a numero
 
 ```javascript
 >>> 1*undefined 
@@ -377,8 +380,8 @@ Si utilizamos `true` or `false` entre comillas Javascript lo convierte en string
 >>> var b = "true"; typeof b; 
 "string"
 ```
-La doble negación `!!` es una forma sencilla de convertir cualquier valor en su Booleano correspondiente. 
 
+La doble negación `!!` es una forma sencilla de convertir cualquier valor en su Booleano correspondiente.
 
 ```javascript
 >>> !!0
@@ -397,11 +400,10 @@ false
 
 Aplicandolo podemos comprobar como cualquier valor covertido a Booleano es `true` excepto:
 
-- `""`
-- `null`
-- `undefined` 
-- `0`
-- `NaN`
-- `false`
-
+* `""`
+* `null`
+* `undefined` 
+* `0`
+* `NaN`
+* `false`
 

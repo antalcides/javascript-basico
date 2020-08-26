@@ -1,0 +1,34 @@
+{
+  "name": "apuntes-javascript-principiante",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook install && gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trainings-juanmaguitar/apuntes-javascript-principiante.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trainings-juanmaguitar/apuntes-javascript-principiante/issues"
+  },
+  "homepage": "https://github.com/trainings-juanmaguitar/apuntes-javascript-principiante#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "dependencies": {
+    "gitbook-plugin-anchorjs": "^2.1.0",
+    "gitbook-plugin-code-editor": "^1.2.1",
+    "gitbook-plugin-disqus": "^1.0.1",
+    "gitbook-plugin-github": "^3.0.0",
+    "gitbook-plugin-page-toc": "^1.1.1"
+  }
+}

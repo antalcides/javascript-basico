@@ -1,10 +1,12 @@
-#Arrays
+# Arrays y Objetos
 
-Un **[array](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array)** es una lista de valores.
+## Arrays
 
-Para asignar valores a un array encerramos los elementos entre corchetes ( _array literal notation_ )  
+Un [**array**](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array) es una lista de valores.
 
-Los elementos de un array _son indexados con números consecutivos a partir de 0_  
+Para asignar valores a un array encerramos los elementos entre corchetes \( _array literal notation_ \)
+
+Los elementos de un array _son indexados con números consecutivos a partir de 0_
 
 Para acceder a un elemento del array especificamos el _índice entre corchetes_
 
@@ -65,7 +67,7 @@ Un [array](http://bonsaiden.github.com/JavaScript-­‐Garden/#array.general) pu
 6
 ```
 
-#Objetos
+## Objetos
 
 ```javascript
 var hero = {
@@ -74,15 +76,15 @@ var hero = {
 };
 ```
 
-Un **objeto** es como un array pero donde los índices los definimos nosotros  
+Un **objeto** es como un array pero donde los índices los definimos nosotros
 
-Para definir un objeto utilizamos las llaves `{}` ( _object literal notation_ )  
+Para definir un objeto utilizamos las llaves `{}` \( _object literal notation_ \)
 
-Los elementos de un objeto ( _propiedades_ ) los separamos por comas  
+Los elementos de un objeto \( _propiedades_ \) los separamos por comas
 
-El par _clave/valor_ (key/value) lo dividimos con 2 puntos
+El par _clave/valor_ \(key/value\) lo dividimos con 2 puntos
 
-Las claves (_keys_, nombres de las propiedades) pueden ir entre comillas, pero _no se recomienda_ definirlas asi
+Las claves \(_keys_, nombres de las propiedades\) pueden ir entre comillas, pero _no se recomienda_ definirlas asi
 
 ```javascript
 var o = {prop: 1};
@@ -103,8 +105,8 @@ var dog = {
 
 Hay 2 maneras de acceder a la propiedad de un objeto:
 
-- Con la notación de corchetes: `hero['occupation']`  
-- Con la notación de puntos: `hero.occupation`  
+* Con la notación de corchetes: `hero['occupation']`  
+* Con la notación de puntos: `hero.occupation`  
 
 Los objetos pueden contener otros objetos
 
@@ -127,7 +129,7 @@ var book = {
 "Heller"
 ```
 
-Podemos definir un objeto vacio y luego añadirle (y quitarle) propiedades y métodos
+Podemos definir un objeto vacio y luego añadirle \(y quitarle\) propiedades y métodos
 
 ```javascript
 >>> var hero = {};
@@ -144,8 +146,7 @@ true
 reference to undefined property hero.name
 ```
 
-Cuando estamos dentro de un método, con `this` hacemos referencia al objeto al que
-pertenece ( _“this object”_ )
+Cuando estamos dentro de un método, con `this` hacemos referencia al objeto al que pertenece \( _“this object”_ \)
 
 ```javascript
 var hero = {
@@ -158,9 +159,9 @@ var hero = {
 "Rafaelo"
 ```
 
-## Funciones Constructoras
+### Funciones Constructoras
 
-Otra manera de crear objetos es mediante **[funciones constructoras](http://hubpages.com/hub/Creating-­‐JavaScript-­‐Objects-­‐by-­‐Constructor-­‐Function)**
+Otra manera de crear objetos es mediante [**funciones constructoras**](http://hubpages.com/hub/Creating-­‐JavaScript-­‐Objects-­‐by-­‐Constructor-­‐Function)
 
 Para crear objetos con estas funciones hay que usar el operador `new`
 
@@ -189,13 +190,13 @@ En el navegador este objeto global se llama `window`
 
 Por lo tanto, podemos acceder a una variable global `a`:
 
-- Como una variable `a`
-- Como una propiedad del objeto global: `window[‘a’]` o `window.a`
+* Como una variable `a`
+* Como una propiedad del objeto global: `window[‘a’]` o `window.a`
 
 Si declaramos una función constructora y la llamamos sin `new`
 
-- Devolverá `undefined`
-- Todas las propiedades declaradas con `this` se convertirán en propiedades de `window`
+* Devolverá `undefined`
+* Todas las propiedades declaradas con `this` se convertirán en propiedades de `window`
 
 ```javascript
 >>> function Hero(name) {this.name = name;}
@@ -217,7 +218,7 @@ h has no properties
 "Michelangelo"
 ```
 
-Hay maneras de [evitar estos "accidentes"](http://www.2ality.com/2013/07/defending-constructors.html) (llamar a un constructor sin `new`) como por ejemplo activar `strict mode` (lanzaria una excepcion en este caso).
+Hay maneras de [evitar estos "accidentes"](http://www.2ality.com/2013/07/defending-constructors.html) \(llamar a un constructor sin `new`\) como por ejemplo activar `strict mode` \(lanzaria una excepcion en este caso\).
 
 Cuando creamos un objeto, se le asigna siempre la propiedad `constructor` que contiene una referencia a la función constructora utilizada para crear el objeto
 
@@ -250,7 +251,7 @@ false
 true
 ```
 
-## Trabajando con Objetos
+### Trabajando con Objetos
 
 Otra forma de crear un objeto, es a través de una función que nos devuelva un objeto.
 
@@ -317,3 +318,4 @@ true
 >>> mydog === fido
 false
 ```
+

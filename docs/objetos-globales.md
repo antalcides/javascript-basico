@@ -1,23 +1,22 @@
 # Objetos Globales
 
-Son los objetos que tenemos disponibles en el ámbito global (objetos primitivos)
+Son los objetos que tenemos disponibles en el ámbito global \(objetos primitivos\)
 
 Los podemos dividir en 3 grupos
 
-- _Objetos contenedores de datos_:  Object, Array, Function, Boolean, Number
-- _Objetos de utilidades_: Math, Date, RegExp
-- _Objetos de errores_: Error
+* _Objetos contenedores de datos_:  Object, Array, Function, Boolean, Number
+* _Objetos de utilidades_: Math, Date, RegExp
+* _Objetos de errores_: Error
+* En este primer libro vamos a ver sólo los _objetos contenedores de datos_
 
-- En este primer libro vamos a ver sólo los _objetos contenedores de datos_
-
-##[Object](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object)
+## [Object](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object)
 
 **Object** es el padre de todos los objetos Javascript, es decir, cualquier objeto hereda de él
 
 Para crear un objeto vacio podemos usar:
 
-- La notacion literal :  `var o = {}`
-- La funcion constructora Object():  `var o = new Object();`
+* La notacion literal :  `var o = {}`
+* La funcion constructora Object\(\):  `var o = new Object();`
 
 ```javascript
 >>> var o = new Object();
@@ -28,17 +27,17 @@ Para crear un objeto vacio podemos usar:
 true
 ```
 
-##[Array](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array)
+## [Array](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array)
 
 Para crear arrays podemos usar:
 
-- La notacion literal :  `var a = []`
-- La funcion constructora Array():  `var o = new Array();`
+* La notacion literal :  `var a = []`
+* La funcion constructora Array\(\):  `var o = new Array();`
 
 Podemos pasarle parametros al constructor `Array()`
 
-- Varios parametros: Seran asignados como elementos al array
-- Un numero: Se considerará el tamaño del array
+* Varios parametros: Seran asignados como elementos al array
+* Un numero: Se considerará el tamaño del array
 
 ```javascript
 >>> var a = new Array(1,2,3,'four');
@@ -64,10 +63,10 @@ Como los arrays son objetos tenemos disponibles los metodos y propiedades del pa
 Array()
 ```
 
-Los arrays disponen de la propiedad [`length`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/length)  
+Los arrays disponen de la propiedad [`length`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/length)
 
-- Nos devuelve el tamaño del array (numero de elementos)
-- Podemos  modificarlo y cambiar el tamaño del array
+* Nos devuelve el tamaño del array \(numero de elementos\)
+* Podemos  modificarlo y cambiar el tamaño del array
 
 ```javascript
 >>> a[0] = 1; 
@@ -85,16 +84,15 @@ Los arrays disponen de la propiedad [`length`](https://developer.mozilla.org/en/
 >>> a
 [1, undefined]
 ```
-  
-  
+
 Los arrays disponen de unos cuantos metodos interesantes:
 
-- `push()`
-- `pop()`
-- `sort()`
-- `join()`
-- `slice()`
-- `splice()`
+* `push()`
+* `pop()`
+* `sort()`
+* `join()`
+* `slice()`
+* `splice()`
 
 ```javascript
 >>> var a = [3, 5, 1, 7, 'test'];
@@ -129,11 +127,11 @@ Los arrays disponen de unos cuantos metodos interesantes:
 [1, 100, 101, 102, 7, "test"]
 ```
 
-###[`push()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/push)
+### [`push()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/push)
 
 `push()` inserta elementos al final del array  
 `a.push('new')` es lo mismo que `a[a.length] = 'new'`  
-`push()` devuelve el tamaño del array modificado  
+`push()` devuelve el tamaño del array modificado
 
 ```javascript
 >>> var sports = ['soccer', 'baseball'];
@@ -147,11 +145,11 @@ Los arrays disponen de unos cuantos metodos interesantes:
 ["soccer", "baseball", "football", "swimming"]
 ```
 
-###[`pop()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/pop)
+### [`pop()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/pop)
 
-`pop()` elimina el ultimo elemento   
+`pop()` elimina el ultimo elemento  
 `a.pop()` es lo mismo que `a.length--`;  
-`pop()` devuelve el elemento eliminado  
+`pop()` devuelve el elemento eliminado
 
 ```javascript
 >>> var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
@@ -163,7 +161,7 @@ Los arrays disponen de unos cuantos metodos interesantes:
 ["angel", "clown", "mandarin"]
 ```
 
-###[`sort()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort)
+### [`sort()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort)
 
 ordena el array y devuelve el array modificado
 
@@ -191,9 +189,9 @@ ordena el array y devuelve el array modificado
 [1, 2, 3, 4, 5, 12, 36, 42]
 ```
 
-###[`join()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/join)
+### [`join()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/join)
 
-`join()` devuelve una cadena (string) con los valores de los elementos del array 
+`join()` devuelve una cadena \(string\) con los valores de los elementos del array
 
 ```javascript
 >>> var a = ['Wind', 'Rain', 'Fire'];
@@ -205,9 +203,9 @@ ordena el array y devuelve el array modificado
 "string"
 ```
 
-###[`slice()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/slice)
+### [`slice()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/slice)
 
-`slice()` devuelve un trozo del array  sin modficar el original 
+`slice()` devuelve un trozo del array sin modficar el original
 
 ```javascript
 >>> var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
@@ -218,9 +216,9 @@ ordena el array y devuelve el array modificado
 ["Orange", "Lemon"]
 ```
 
-###[`splice()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/splice)
+### [`splice()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/splice)
 
-`splice()` quita un trozo del array, lo devuelve  y opcionalmente rellena el hueco con nuevos elementos 
+`splice()` quita un trozo del array, lo devuelve y opcionalmente rellena el hueco con nuevos elementos
 
 ```javascript
 >>> var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
@@ -241,11 +239,11 @@ ordena el array y devuelve el array modificado
 []
 ```
 
-##[Function](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function)
+## [Function](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function)
 
 Las funciones son objetos
 
-Podemos crear funciones con la función constructora `Function()` (aunque este metodo no se recomienda ya que internamente hace un _eval()_ )
+Podemos crear funciones con la función constructora `Function()` \(aunque este metodo no se recomienda ya que internamente hace un _eval\(\)_ \)
 
 ```javascript
 >>> function sum(a, b) {return a + b;};
@@ -259,7 +257,7 @@ Podemos crear funciones con la función constructora `Function()` (aunque este m
 3
 ```
 
-Las funciones disponen de la propiedad [`length`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/length) que contiene el numero de parametros que acepta la función 
+Las funciones disponen de la propiedad [`length`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/length) que contiene el numero de parametros que acepta la función
 
 ```javascript
 >>> function myfunc(a, b, c){ return true; }
@@ -267,9 +265,9 @@ Las funciones disponen de la propiedad [`length`](https://developer.mozilla.org/
 3
 ```
 
-##[Boolean](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean)
+## [Boolean](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean)
 
-El objeto _Boolean_ es un contenedor para un valor de tipo booleano  
+El objeto _Boolean_ es un contenedor para un valor de tipo booleano
 
 Podemos crear objetos _Boolean_ con la función constructora `Boolean()`
 
@@ -283,7 +281,7 @@ Podemos crear objetos _Boolean_ con la función constructora `Boolean()`
 false
 ```
 
-La función `Boolean` usada como función normal (sin `new`) nos devuelve el valor pasado como parametro convertido a booleano
+La función `Boolean` usada como función normal \(sin `new`\) nos devuelve el valor pasado como parametro convertido a booleano
 
 ```javascript
 >>> Boolean("test") 
@@ -294,12 +292,12 @@ false
 true
 ```
 
-##[Number](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number)
+## [Number](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number)
 
 La función `Number()` puede ser usada:
 
-- Cómo una _función normal_ para convertir valores a número
-- Cómo una _función constructora_ (con `new`) para crear objetos
+* Cómo una _función normal_ para convertir valores a número
+* Cómo una _función constructora_ \(con `new`\) para crear objetos
 
 Los objetos número disponen de los métodos: [`toFixed()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toFixed), [`toPrecision()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toPrecision) y [`toExponential()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toExponential)
 
@@ -312,7 +310,7 @@ Los objetos número disponen de los métodos: [`toFixed()`](https://developer.mo
 "1.2345e+4"
 ```
 
-El método [`toString()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toString) de un objeto numero nos permite transformar un numero a una base determinada 
+El método [`toString()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toString) de un objeto numero nos permite transformar un numero a una base determinada
 
 ```javascript
 >>> var n = new Number(255);
@@ -328,11 +326,11 @@ El método [`toString()`](https://developer.mozilla.org/en/JavaScript/Reference/
 "3"
 ```
 
-##[String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)
+## [String](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String)
 
-Podemos crear objetos String con la función constructora `String()`  
+Podemos crear objetos String con la función constructora `String()`
 
-Un objeto _String_ NO es un dato de tipo primitivo string (`valueOf()`)
+Un objeto _String_ NO es un dato de tipo primitivo string \(`valueOf()`\)
 
 ```javascript
 >>> var primitive = 'Hello';
@@ -350,8 +348,8 @@ true
 
 Un objeto string es parecido a un array de caracteres:
 
-- Cada carácter tiene una posición indexada
-- Tiene disponible la propiedad length
+* Cada carácter tiene una posición indexada
+* Tiene disponible la propiedad length
 
 ```javascript
 >>> obj[0] 
@@ -362,7 +360,7 @@ Un objeto string es parecido a un array de caracteres:
 5
 ```
 
-Aunque los métodos pertenezcan al objeto String, podemos utilizarlos también directamente en datos de tipo primitivo string (se crea el objeto internamente)
+Aunque los métodos pertenezcan al objeto String, podemos utilizarlos también directamente en datos de tipo primitivo string \(se crea el objeto internamente\)
 
 ```javascript
 >>> "potato".length 
@@ -375,25 +373,19 @@ Aunque los métodos pertenezcan al objeto String, podemos utilizarlos también d
 
 Los objetos string disponen de los siguientes métodos:
 
-- [`toUpperCase()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/toUpperCase)  devuelve el string convertido a mayúsculas
+* [`toUpperCase()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/toUpperCase) devuelve el string convertido a mayúsculas
+* [`toLowerCase()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/toLowerCase) devuelve el string convertido a minusculas
+* [`charAt()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/charAt) devuelve el carácter encontrado en la posición indicada
+* [`indexOf()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/indexOf) busca una cadena de texto en el string y devuelve la posición donde la encuentra
+  * Si no encuentra nada devuelve -1 
+* `lastIndexOf()` empieza la búsqueda desde el final de la cadena
+  * Si no encuentra nada devuelve -1 
 
-- [`toLowerCase()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/toLowerCase)  devuelve el string convertido a minusculas
+Por tanto la manera de correcta de chequear si existe una cadena de texto en otra es → `if ( s.toLowerCase().indexOf('couch') !== -1 ) {...}`
 
-- [`charAt()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/charAt)  devuelve el carácter encontrado en la posición indicada
-
-- [`indexOf()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/indexOf) busca una cadena de texto en el string y devuelve la posición donde la encuentra
-    - Si no encuentra nada devuelve -1 
-
-- `lastIndexOf()` empieza la búsqueda desde el final de la cadena
-    - Si no encuentra nada devuelve -1 
-    
-Por tanto la manera de correcta de chequear si existe una cadena de texto en otra es →  `if ( s.toLowerCase().indexOf('couch') !== -1 ) {...}`
-
-- [`slice()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/slice) devuelve un trozo de la cadena de texto 
-
-- [`split()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/split) transforma el string en un array utilizando un string como separador 
-
-- [`concat()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/concat) une strings
+* [`slice()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/slice) devuelve un trozo de la cadena de texto
+* [`split()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/split) transforma el string en un array utilizando un string como separador
+* [`concat()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/concat) une strings
 
 ```javascript
 >>> var s = new String("Couch potato");
@@ -414,3 +406,4 @@ Por tanto la manera de correcta de chequear si existe una cadena de texto en otr
 >>> s.concat("es") 
 "Couch potatoes"
 ```
+

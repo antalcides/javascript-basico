@@ -1,16 +1,16 @@
-# Summary
+# Table of contents
 
-* [Prólogo](prologo/README.md)
-* [Primeros pasos con Javascript](como_empezar/README.md)
-* [Ideas Claras de Javascript](generalidades/README.md)
-* [Variables y Operadores](variables_operadores/README.md)
-* [Condiciones y Bucles](condiciones-bucles/README.md)
-* [Funciones](funciones/README.md)
-* [Arrays y Objetos](arrays-y-objetos/README.md)
-* [Objetos Globales](objetos-globales/README.md)
-* [El entorno del Navegador](entorno_navegador/README.md)
-* [BOM](bom/README.md)
-* [DOM](dom/README.md)
-* [Events](eventos/README.md)
-    
+* [Introduction](README.md)
+* [Prólogo](prologo.md)
+* [Primeros pasos con Javascript](como_empezar.md)
+* [Ideas Claras de Javascript](generalidades.md)
+* [Variables y Operadores](variables_operadores.md)
+* [Condiciones y Bucles](condiciones-bucles.md)
+* [Funciones](funciones.md)
+* [Arrays y Objetos](arrays-y-objetos.md)
+* [Objetos Globales](objetos-globales.md)
+* [El entorno del Navegador](entorno_navegador.md)
+* [BOM](bom.md)
+* [DOM](dom.md)
+* [Events](eventos.md)
 

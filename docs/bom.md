@@ -1,10 +1,10 @@
-# BOM (el navegador)
+# BOM
 
-El **BOM (Browser Object Model)** lo conforman todos los objetos que están fuera del documento cargado (document) y forman parte del objeto window
+El **BOM \(Browser Object Model\)** lo conforman todos los objetos que están fuera del documento cargado \(document\) y forman parte del objeto window
 
-![BOM](images/bom.png)
+![BOM](.gitbook/assets/bom.png)
 
-El objeto `window` ademas de servir de contenedor de las variables globales y de ofrecer los metodos nativos de JS (`window.parseInt`), contiene informacion sobre el entorno del navegador (frame, iframe, popup, ventana o pestaña)
+El objeto `window` ademas de servir de contenedor de las variables globales y de ofrecer los metodos nativos de JS \(`window.parseInt`\), contiene informacion sobre el entorno del navegador \(frame, iframe, popup, ventana o pestaña\)
 
 ## Propiedades de `window`
 
@@ -12,7 +12,7 @@ Algunos de los _objetos_ que tenemos disponibles en window son:
 
 ### [`window.navigator`](https://developer.mozilla.org/en/DOM/window.navigator)
 
-Es un objeto que contiene información sobre el navegador  
+Es un objeto que contiene información sobre el navegador
 
 ```javascript
 >>> window.navigator.userAgent
@@ -20,9 +20,9 @@ Es un objeto que contiene información sobre el navegador
 Gecko/20101026 Firefox/3.6.12 ( .NET CLR 3.5.30729)"
 ```
 
-### [`window.location`](https://developer.mozilla.org/en/DOM/window.location) 
+### [`window.location`](https://developer.mozilla.org/en/DOM/window.location)
 
-Es un objeto que contiene info (y metodos) sobre la URL actual
+Es un objeto que contiene info \(y metodos\) sobre la URL actual
 
 ```javascript
 >>> window.location.href = 'http://www.packtpub.com'
@@ -34,9 +34,9 @@ Es un objeto que contiene info (y metodos) sobre la URL actual
 >>> location = location
 ```
 
-### [`window.history`](https://developer.mozilla.org/en/DOM/window.history) 
+### [`window.history`](https://developer.mozilla.org/en/DOM/window.history)
 
-Es un objeto que contiene el historial de paginas visitadas y tiene métodos para movernos en él (sin poder ver las URL’s)
+Es un objeto que contiene el historial de paginas visitadas y tiene métodos para movernos en él \(sin poder ver las URL’s\)
 
 ```javascript
 >>> window.history.length
@@ -46,13 +46,13 @@ Es un objeto que contiene el historial de paginas visitadas y tiene métodos par
 >>> history.go(-2);
 ```
 
-### [`window.frames`](https://developer.mozilla.org/en/DOM/window.frames) 
+### [`window.frames`](https://developer.mozilla.org/en/DOM/window.frames)
 
 Es una colección de todos los frames que tenemos en la página  
 Cada frame tendrá su propio objeto window  
 Podemos utilizar `parent` para acceder desde el frame hijo al padre  
 Con la propiedad `top` accedemos a la pagina que está por encima de todos los frames  
-Podemos acceder a un frame concreto por su nombre.  
+Podemos acceder a un frame concreto por su nombre.
 
 ```javascript
 <iframe name="myframe" src="about:blank" />
@@ -68,9 +68,9 @@ true
 true
 ```
 
-### [`window.screen`](https://developer.mozilla.org/en/DOM/window.screen) 
+### [`window.screen`](https://developer.mozilla.org/en/DOM/window.screen)
 
-Ofrece info sobre la pantalla (general, fuera del browser)
+Ofrece info sobre la pantalla \(general, fuera del browser\)
 
 ```javascript
 >>> window.screen.colorDepth
@@ -89,12 +89,11 @@ Ofrece info sobre la pantalla (general, fuera del browser)
 
 Algunos de los _métodos_ que tenemos disponibles en `window` son:
 
-### [`window.open()`](https://developer.mozilla.org/en/DOM/window.open), [`window.close()`](https://developer.mozilla.org/en/DOM/window.close) 
+### [`window.open()`](https://developer.mozilla.org/en/DOM/window.open), [`window.close()`](https://developer.mozilla.org/en/DOM/window.close)
 
-Nos permiten abrir (y cerrar) nuevas ventanas (popups)  
-`window.open()` devuelve una referencia a la ventana creada (si devuelve false es que no la ha podido crear - popups blocked)  
-No se recomienda su uso ;-)
-
+Nos permiten abrir \(y cerrar\) nuevas ventanas \(popups\)  
+`window.open()` devuelve una referencia a la ventana creada \(si devuelve false es que no la ha podido crear - popups blocked\)  
+No se recomienda su uso ;-\)
 
 ```javascript
 >>> var win = window.open('http://www.packtpub.com', 'packt',
@@ -102,10 +101,10 @@ No se recomienda su uso ;-)
 >>> win.close()
 ```
 
-### [`window.moveTo()`](https://developer.mozilla.org/en/DOM/window.moveTo), [`window.moveBy()`](https://developer.mozilla.org/en/DOM/window.moveBy), [`window.resizeTo()`](https://developer.mozilla.org/en/DOM/window.resizeTo), [`window.resizeBy()`](https://developer.mozilla.org/en/DOM/window.resizeBy) 
+### [`window.moveTo()`](https://developer.mozilla.org/en/DOM/window.moveTo), [`window.moveBy()`](https://developer.mozilla.org/en/DOM/window.moveBy), [`window.resizeTo()`](https://developer.mozilla.org/en/DOM/window.resizeTo), [`window.resizeBy()`](https://developer.mozilla.org/en/DOM/window.resizeBy)
 
 Nos permiten mover y redimensionar las ventanas  
-No se recomienda su uso ;-)
+No se recomienda su uso ;-\)
 
 ```javascript
 >>> window.moveTo(100, 100)
@@ -114,7 +113,7 @@ No se recomienda su uso ;-)
 >>> window.resizeBy(20, 10)
 ```
 
-### [`window.alert()`](https://developer.mozilla.org/en/DOM/window.alert), [`window.prompt()`](https://developer.mozilla.org/en/DOM/window.prompt), [`window.confirm()`](https://developer.mozilla.org/en/DOM/window.confirm) 
+### [`window.alert()`](https://developer.mozilla.org/en/DOM/window.alert), [`window.prompt()`](https://developer.mozilla.org/en/DOM/window.prompt), [`window.confirm()`](https://developer.mozilla.org/en/DOM/window.confirm)
 
 Nos permiten interactuar con el usuario a traves de mensajes del sistema
 
@@ -127,10 +126,10 @@ if (confirm('Are you sure you want to delete this item?')) {
 >>> var answer = prompt('And your name was?');
 console.log(answer);
 ```
-    
-### [`window.setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setTimeout), [`window.setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setInterval) 
 
-Nos permiten ejecutar código después de un intervalo de tiempo (y en su caso, repetirlo)
+### [`window.setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setTimeout), [`window.setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setInterval)
+
+Nos permiten ejecutar código después de un intervalo de tiempo \(y en su caso, repetirlo\)
 
 ```javascript
 >>> function boo(){alert('Boo!');}
@@ -152,3 +151,4 @@ var id = setInterval( function(){ alert('boo, boo')}, 2000 );
 [`window.document`](https://developer.mozilla.org/en/DOM/window.document) es un objeto del BOM con info sobre el documento actual
 
 Todos los métodos y propiedades que estan dentro de `window.document` pertenecen a la categoría de objetos DOM
+
